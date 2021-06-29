@@ -1,0 +1,22 @@
+<% @articles.each do |article| %>
+  
+   
+
+
+
+
+    <tr>
+      <td style="
+      font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+      font-size: 14px;    border: 1px solid #0d3058;
+  "><%= link_to article.name, article %></td>
+      <td style="    border: 1px solid #0d3058;"><%= article.author.name %></td>
+      <td style="    border: 1px solid #0d3058;"></td>
+      <td style="    border: 1px solid #0d3058;"></td>
+      <td style="    border: 1px solid #0d3058;"></td>
+      <td style="    border: 1px solid #0d3058;"></td>
+    </tr>
+
+    
+  <% end %>
+

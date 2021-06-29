@@ -1,0 +1,7 @@
+$("#searchmerch").submit(function(evt){	 
+	
+	console.log("search");
+	$('table tbody').append("<%= j render 'articles/merchantslist' %>");
+
+ 
+});

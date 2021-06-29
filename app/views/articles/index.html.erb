@@ -1,0 +1,125 @@
+
+<div id="merchantspage">
+  <h1>Merchant List</h1>
+  <%= render "articles/searchmerchants" %>
+
+  <div class="shadow-lg merchcontainer">
+    <table id="bands" class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>Name</th>
+          <th>City</th>
+          <th>Street</th>
+          <th>Country Code</th>
+          <th>Extra</th><th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @articles.each do |article| %>
+          <tr>
+            <td>
+                <%= article.name %>
+            </td>
+            <td>
+                <%= article.city %>
+            </td>
+            <td>
+              <%= article.street %></a>
+            </td>
+            <td>
+              <div class="merchtablecountry"><div class="merccountryicon">
+              <%= show_svg('countries/GB.svg') %>
+              </div>
+              <div class="merccountrytxt">
+                <p> <%= article.country %></p>
+              </div>
+            </td>
+            <td>
+              <ul class="merchantextra">
+                <li>
+                  <div class="mextraphone">
+                    <div class="extraicon">
+                    <%= show_svg('phone.svg') %>
+                    </div>
+                    <div class="mextratxt">
+                      <p>
+                        <% if (article.extra['phone'].nil? && article.extra['contact_website'].nil? ) %>
+                          missing number
+                        <% else %>
+                          <%= article.extra['phone'] %> <%= article.extra['contact_website'] %> 
+                        <% end %>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="mextrwebsite">
+                  <div class="extrwebsicon">
+                    <div class="xwbicon">
+                    <%= show_svg('website.svg') %>
+                    </div>
+                    <div class="xtxtbicon">
+                      <p>
+                      <% if (article.extra['website'].nil?) %>
+                        missing website
+                      <% else %>
+                      <%= article.extra['website'] %>
+                      <% end %>
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </td>
+            <td>
+              <ul class="merchtableoption">
+                <li class="merchtableedit">
+                  <div class="merchoptionedcont">
+                    <div class="merchedicon">
+                    <%= show_svg('edit.svg') %>
+                    </div>
+                    <div class="merchedittxt">
+                      <p>Edit</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="merchtabledelete">
+                  <div class="merchoptdeletecont">
+                    <div class="merchdeleticon">
+                    <%= show_svg('garbage.svg') %>
+                    </div>
+                    <div class="merchdeletetxt">
+                      <%= link_to(article, method: :delete, data: { confirm: 'Are you sure?', remote: true }, class: "delete") do %>
+                        Delete
+                      <% end %>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+    <div class="merchcontfooter">
+      <%= will_paginate @articles %>
+    </div>
+  </div>
+
+  <div class="uplodmerchfile">
+    <div class="shadow-lg uplfilecontainer">
+    <%= form_tag import_companies_path, class:"form-inline my-2 my-lg-0", :html => { :multipart => true},:id => 'uploadfileform' , :remote => true  do %>
+      <%= file_field_tag :file, class:"form-control mr-sm-2 uploadmerchinpfile" %>
+      <%= submit_tag "Upload Companies", class:"btn btn-outline-success my-2 my-sm-0 uploadmercfilesubmitbtn" %>
+    <% end %>
+    </div>
+  </div>
+
+ <!-- <div class="shadow-lg plusmenumerch">
+    <div class="plsmenuicon">
+      <!-- svg6 -->
+    </div>
+  </div>
+  -->
+</div>
+
+<%= javascript_include_tag 'application' %>

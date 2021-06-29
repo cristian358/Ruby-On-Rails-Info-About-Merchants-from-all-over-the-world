@@ -1,0 +1,61 @@
+
+<div class="h-100 w-100">
+<div style="
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: #00000052;
+  bottom: 0;
+"></div>
+<div class="container">
+
+
+
+
+  <%= form_for(resource, as: resource_name, url: password_path, html: { method: :post, class: 'maxdimensions centeringcomponent w-100 h-100' }) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+  
+<div class="row justify-content-center" style="">
+<div class="col-md-8 col-lg-8" style="background: radial-gradient(#030b16, transparent);">
+<div class="login-wrap p-0">
+<h3 class="mb-4 text-center" style="font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;">Forgot your password?</h3>
+<form action="#" class="signin-form" style="
+  /* background: radial-gradient(#030d19, transparent); */
+">
+<div class="form-group">
+
+<%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "E-mail", style: "
+border: 1px solid;
+font-weight: bold;
+padding: 0px 48px 0 30px;font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+"  %>
+</div>
+
+
+<div class="form-group">
+
+<%= f.submit "Send me reset password instructions", type: "submit", class: "form-control btn btn-primary submit px-3", style: "
+background: white !important;
+border: none !important;font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+font-weight: bold" %>
+
+
+</div>
+
+<div class="form-group w-100" style="font-size:14px;
+display: inline-block !important;
+width: 120px;
+height: 44px;">
+
+  <%= render "devise/shared/links" %>
+</div>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+<% end %>
+</div>

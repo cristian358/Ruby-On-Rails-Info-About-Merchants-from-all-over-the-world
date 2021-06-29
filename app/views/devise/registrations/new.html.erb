@@ -1,0 +1,161 @@
+
+<div class="h-100 w-100">
+<div style="
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background: #00000052;
+  bottom: 0;
+"></div>
+<div class="container">
+
+
+  <%= form_for(resource, as: resource_name, html: {class: 'maxdimensions centeringcomponent w-100 h-100'}, url: user_registration_path) do |f| %>
+    <%= render "devise/shared/error_messages", resource: resource %>
+<div class="row justify-content-center" style="">
+<div class="col-md-8 col-lg-6" style="background: radial-gradient(#030b16, transparent);">
+<div class="login-wrap p-0">
+<h3 class="mb-4 text-center" style="font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+margin-top: 13px;">Didn't have an account?</h3>
+<form action="#" class="signin-form" style="
+  /* background: radial-gradient(#030d19, transparent); */
+">
+<div class="form-group">
+
+
+
+
+
+
+<%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Username", style: "
+border: 1px solid;
+font-weight: bold;
+padding: 0px 48px 0 30px;    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+"  %>
+</div>
+<div class="form-group">
+
+<% if @minimum_password_length %>
+(<%= @minimum_password_length %> characters minimum)
+<% end %>
+
+
+
+<%= f.password_field :password, autocomplete: "new-password", type: "password", class: "form-control", placeholder: "Password", style: "
+border: 1px solid;
+font-weight: bold;
+padding: 0px 48px 0 30px;    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;    margin-top: 4px;
+" %>
+
+<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" style="
+  width: 22px;
+  font-size: 21px;
+  height: 22px;
+"></span>
+
+</div>
+
+<div class="form-group">
+<%= f.password_field :password_confirmation, autocomplete: "new-password", type: "password", class: "form-control", placeholder: "Repeat password", style: "
+border: 1px solid;
+font-weight: bold;
+padding: 0px 48px 0 30px;  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+" %>
+
+<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" style="
+  width: 22px;
+  font-size: 21px;
+  height: 22px;
+"></span>
+</div>
+
+
+
+
+
+<div class="form-group">
+
+<span toggle="#password-field"  style="
+width: 100%;
+display: inline-block;
+font-size: 1rem;
+font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+font-weight: bold;
+margin-bottom: 7px;
+">Choose your role:</span>
+
+
+<div class="form-check  d-inline-block" style="font-size: 1rem;
+font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+font-weight: bold;
+margin-bottom: 7px;">
+  <%= ad_type_radio_button('one') %>
+  <%= label_tag :contactmethod, 'User', :value => 'one', class: "form-check-label rbregistration", for: "flexRadioDefault2" %>
+</div> 
+
+<div class="form-check  d-inline-block" style="font-size: 1rem;
+font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+font-weight: bold;
+margin-bottom: 7px;    margin: 0 20px;">
+<%= ad_type_radio_button('two')%>
+  <%= label_tag :contactmethod, 'Moderator', :value => 'one', class: "form-check-label rbregistration", for: "flexRadioDefault2" %>
+</div> 
+
+<div class="form-check  d-inline-block" style="font-size: 1rem;
+font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+font-weight: bold;
+margin-bottom: 7px;">
+<%= ad_type_radio_button('three')%>
+  <%= label_tag :contactmethod, 'Admin', :value => 'one', class: "form-check-label rbregistration", for: "flexRadioDefault2" %>
+</div> 
+
+
+</div>
+
+
+
+
+
+
+<div class="form-group">
+
+<%= f.submit "Sign Up", type: "submit", class: "form-control btn btn-primary submit px-3", style: "
+background: white !important;
+border: none !important;
+font-weight: bold" %>
+
+
+</div>
+<div class="form-group d-md-flex" style="margin-bottom: 4px">
+
+
+
+
+</div>
+<div class="form-group d-md-flex" style="    font-size: 14px;
+display: inline-block !important;
+width: 120px;
+height: 44px;
+}">
+
+  <%= render "devise/shared/links" %>
+</div>
+
+</form>
+</div>
+</div>
+</div>
+</div>
+<% end %>
+</div>
+
+
+
+
+
+
+
+
+

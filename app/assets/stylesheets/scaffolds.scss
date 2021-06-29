@@ -1,0 +1,1022 @@
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px; }
+
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px; }
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+a {
+  color: #000; }
+
+a:visited {
+  color: #666; }
+
+a:hover {
+  color: #fff;
+  background-color: #000; }
+
+th {
+  padding-bottom: 5px; }
+
+td {
+  padding: 0 5px 7px; }
+
+div.field,
+div.actions {
+  margin-bottom: 10px; }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0; }
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff; }
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square; }
+
+label {
+  display: block; }
+
+.centeringcomponent {
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+}
+
+.maxdimensions {
+  max-width: 690px;
+  max-height: 522px;
+}
+
+.rbregistration {
+  height: 24px;
+  line-height: 24px
+}
+
+.bck {
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.publicbck {
+  background-image: url(https://wallpaperaccess.com/full/643353.png);
+}
+
+.privatebck {
+  background: #21212129;
+}
+
+.form-check {
+  .form-check-input {
+    margin: 0 !important;
+    display: inline-block;
+    position: relative;
+    top: 5px;
+  }
+  label {
+    margin-left: 6px;
+  }
+}
+.table {
+  .thead-dark {
+    th {
+      background-color: #0d3058;
+      border-color: #0d3058;
+      border: none;
+    }
+  } 
+} 
+
+.pagination {
+  display: inline-block;
+  height: 100%;
+  border: 1px solid #0d3058;
+  border-radius: 23px;
+  padding: 6px 5px;
+  .previous_page {
+    height: 100%;
+    float: left;
+    line-height: 25px;
+    margin-right: 7px;
+    margin-left: 3px;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    border-radius: 20px;
+    padding: 0 10px;
+    width: auto;
+  }
+  .next_page {
+    float: right;
+    line-height: 25px;
+    margin-left: 7px;
+    margin-right: 3px;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    width: auto;
+    border-radius: 20px;
+    padding: 0 10px;
+  }
+  a {
+    float: left;
+    line-height: 26px;
+    margin: 0 3px;
+    border: none;
+    border-radius: 50%;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    width: 26px;
+  }
+  a:hover {
+      background-color: #0d3058;
+  }
+  span:hover {
+    background-color: #0d3058;
+    color: white;
+    cursor: pointer;
+  }
+    .current {
+      float: left;
+      line-height: 26px;
+      margin: 0 3px;
+      width: 26px;
+      height: 100%;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 50%;
+      font-style: normal;
+      font-size: 14px;
+      font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+      background: #0d3058;
+      color: white;
+      text-align: center;
+    }
+}
+
+
+
+
+
+.alertify,
+.alertify-show,
+.alertify-log {
+	-webkit-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+	   -moz-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+	    -ms-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+	     -o-transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+	        transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275); /* easeOutBack */
+}
+.alertify-hide {
+	-webkit-transition: all 250ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
+	   -moz-transition: all 250ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
+	    -ms-transition: all 250ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
+	     -o-transition: all 250ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
+	        transition: all 250ms cubic-bezier(0.600, -0.280, 0.735, 0.045); /* easeInBack */
+}
+.alertify-log-hide {
+	-webkit-transition: all 500ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
+	   -moz-transition: all 500ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
+	    -ms-transition: all 500ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
+	     -o-transition: all 500ms cubic-bezier(0.600, -0.280, 0.735, 0.045);
+	        transition: all 500ms cubic-bezier(0.600, -0.280, 0.735, 0.045); /* easeInBack */
+}
+.alertify-cover {
+	position: fixed; z-index: 99999;
+	top: 0; right: 0; bottom: 0; left: 0;
+	background-color:white;
+	filter:alpha(opacity=0);
+	opacity:0;
+}
+	.alertify-cover-hidden {
+		display: none;
+	}
+.alertify {
+	position: fixed; z-index: 99999;
+	top: 50px; left: 50%;
+	width: 550px;
+	margin-left: -275px;
+	opacity: 1;
+}
+	.alertify-hidden {
+		-webkit-transform: translate(0,-150px);
+		   -moz-transform: translate(0,-150px);
+		    -ms-transform: translate(0,-150px);
+		     -o-transform: translate(0,-150px);
+		        transform: translate(0,-150px);
+		opacity: 0;
+		display: none;
+	}
+	/* overwrite display: none; for everything except IE6-8 */
+	:root *> .alertify-hidden {
+		display: block;
+		visibility: hidden;
+	}
+.alertify-logs {
+	position: fixed;
+	z-index: 5000;
+	bottom: 10px;
+	right: 10px;
+	width: 300px;
+}
+.alertify-logs-hidden {
+	display: none;
+}
+	.alertify-log {
+		display: block;
+		margin-top: 10px;
+		position: relative;
+		right: -300px;
+		opacity: 0;
+	}
+	.alertify-log-show {
+		right: 0;
+		opacity: 1;
+	}
+	.alertify-log-hide {
+		-webkit-transform: translate(300px, 0);
+		   -moz-transform: translate(300px, 0);
+		    -ms-transform: translate(300px, 0);
+		     -o-transform: translate(300px, 0);
+		        transform: translate(300px, 0);
+		opacity: 0;
+	}
+	.alertify-dialog {
+		padding: 25px;
+	}
+		.alertify-resetFocus {
+			border: 0;
+			clip: rect(0 0 0 0);
+			height: 1px;
+			margin: -1px;
+			overflow: hidden;
+			padding: 0;
+			position: absolute;
+			width: 1px;
+		}
+		.alertify-inner {
+			text-align: center;
+		}
+		.alertify-text {
+			margin-bottom: 15px;
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			   -moz-box-sizing: border-box;
+			        box-sizing: border-box;
+			font-size: 100%;
+		}
+		.alertify-buttons {
+		}
+			.alertify-button,
+			.alertify-button:hover,
+			.alertify-button:active,
+			.alertify-button:visited {
+				background: none;
+				text-decoration: none;
+				border: none;
+				/* line-height and font-size for input button */
+				line-height: 1.5;
+				font-size: 100%;
+				display: inline-block;
+				cursor: pointer;
+				margin-left: 5px;
+			}
+
+@media only screen and (max-width: 680px) {
+	.alertify,
+	.alertify-logs {
+		width: 90%;
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+	}
+	.alertify {
+		left: 5%;
+		margin: 0;
+	}
+}
+
+
+
+
+
+
+/**
+ * Default Look and Feel
+ */
+.alertify,
+.alertify-log {
+	font-family: sans-serif;
+}
+.alertify {
+	background: #FFF;
+	border: 10px solid #333; /* browsers that don't support rgba */
+	border: 10px solid rgba(0,0,0,.7);
+	border-radius: 8px;
+	box-shadow: 0 3px 3px rgba(0,0,0,.3);
+	-webkit-background-clip: padding;     /* Safari 4? Chrome 6? */
+	   -moz-background-clip: padding;     /* Firefox 3.6 */
+	        background-clip: padding-box; /* Firefox 4, Safari 5, Opera 10, IE 9 */
+}
+	.alertify-text {
+		border: 1px solid #CCC;
+		padding: 10px;
+		border-radius: 4px;
+	}
+	.alertify-button {
+		border-radius: 4px;
+		color: #FFF;
+		font-weight: bold;
+		padding: 6px 15px;
+		text-decoration: none;
+		text-shadow: 1px 1px 0 rgba(0,0,0,.5);
+		box-shadow: inset 0 1px 0 0 rgba(255,255,255,.5);
+		background-image: -webkit-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+		background-image:    -moz-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+		background-image:     -ms-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+		background-image:      -o-linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+		background-image:         linear-gradient(top, rgba(255,255,255,.3), rgba(255,255,255,0));
+	}
+	.alertify-button:hover,
+	.alertify-button:focus {
+		outline: none;
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,.1), rgba(0,0,0,0));
+		background-image:    -moz-linear-gradient(top, rgba(0,0,0,.1), rgba(0,0,0,0));
+		background-image:     -ms-linear-gradient(top, rgba(0,0,0,.1), rgba(0,0,0,0));
+		background-image:      -o-linear-gradient(top, rgba(0,0,0,.1), rgba(0,0,0,0));
+		background-image:         linear-gradient(top, rgba(0,0,0,.1), rgba(0,0,0,0));
+	}
+	.alertify-button:focus {
+		box-shadow: 0 0 15px #2B72D5;
+	}
+	.alertify-button:active {
+		position: relative;
+		box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
+	}
+		.alertify-button-cancel,
+		.alertify-button-cancel:hover,
+		.alertify-button-cancel:focus {
+			background-color: #FE1A00;
+			border: 1px solid #D83526;
+		}
+		.alertify-button-ok,
+		.alertify-button-ok:hover,
+		.alertify-button-ok:focus {
+			background-color: #5CB811;
+			border: 1px solid #3B7808;
+		}
+
+.alertify-log {
+	background: #1F1F1F;
+	background: rgba(0,0,0,.9);
+	padding: 15px;
+	border-radius: 4px;
+	color: #FFF;
+	text-shadow: -1px -1px 0 rgba(0,0,0,.5);
+}
+	.alertify-log-error {
+		background: #FE1A00;
+		background: rgba(254,26,0,.9);
+	}
+	.alertify-log-success {
+		background: #5CB811;
+		background: rgba(92,184,17,.9);
+	}
+
+button {
+  min-width: 300px;
+  outline: none;
+}
+
+
+
+// Table_index uppanel SCSS style
+
+#merchantspage {
+	h1 {
+		text-align: center;
+		font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+	}
+	.uppanel {
+		width: 999px;
+		margin: 0 auto;
+		height: 45px;
+		padding: 4px 5px;
+		background: white;
+		border-radius: 33px;
+		.input-group {
+			display: inline-block;
+			width: 350px;
+			height: 100%;
+			margin: 0 20px;
+			float: left;
+			margin-left: 0;
+			.form-control {
+				height: 100%;
+				background: #e9ecef;
+				font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+				font-size: 14px;
+				color: black !important;
+				padding: 4px 60px 4px 15px
+			}
+
+			.searchsubmit {
+				right: 0;
+				top: 0;
+				height: 100%;
+				background: #0e3058 !important;
+				width: 53px;
+				text-align: center;
+				padding: 0;
+				position:absolute;    border-radius: 0 60px 60px 0;
+				input {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background: none;
+					border: none;
+					right:0;
+				}
+				i {
+					margin: 0 auto;
+					margin-right: 5px;
+					margin-bottom: 5px;
+					color: white;
+					font-size: 18px;
+					position: absolute;
+					top: 8px;
+					right: 12px;
+				}
+			}
+		}
+		.merchantfilter {
+			display: inline-block;
+			float: right;
+			margin-right: 0px;
+			height: 100%;
+			padding: 0 7px;
+			border: 1px solid #e0e0e0;
+			border-radius: 24px;
+			.merchcheckrb {
+				height: 100%;
+				padding-top: 5px;
+				box-sizing: border-box;
+				float: left;    display: inline-block;    padding-left: 0;
+				label {
+					font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+					font-size: 14px;
+					height: 100%;
+					line-height: 24px;    display: inline-block;
+				}
+			}
+			.desc {
+				display: inline-block;
+				float: left;
+				height: 100%;
+				padding: 10px 0 0 0;
+				.merchk  {
+					label {
+					display: inline-block;
+					margin-left: 7px;
+					position: relative;
+					top: -2px;
+					font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+					font-size: 14px;
+					}
+				}
+				.merchw {
+					height: 100%;
+					padding: 0;
+					margin-left: 8px;
+					label {
+						display: inline-block;
+						margin-left: 7px;
+						position: relative;
+						top: -2px;
+						font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+						font-size: 14px;
+					}
+				}
+			}
+			.phonecheck {
+				height: 100%;
+				padding-top: 6px;
+				box-sizing: border-box;
+				float: left;
+				margin: 0;
+				display: inline-block;     
+				padding-left: 0;
+				label {
+					font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+					font-size: 14px;
+					height: 100%;
+					line-height: 24px;display: inline-block;
+				}
+			}
+			.websitecheck {
+				height: 100%;
+				padding-top: 6px;
+				box-sizing: border-box;
+				float: left;
+				margin: 0;    
+				display: inline-block;     
+				padding-left: 0;
+				label {
+					font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+					font-size: 14px;
+					height: 100%;
+					line-height: 25px;display: inline-block;
+				}
+			}
+		}
+	}
+	.divide {
+		height: 25px;
+		padding-top: 4px;
+		box-sizing: border-box;
+		float: left;
+		width: 2px;
+		background: #e0e0e0;
+		margin: 5px 12px;
+	}
+	.searchlabel {
+		font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+		font-size: 14px;
+		height: 100%;
+		display: inline-block;
+		float: right;
+		line-height: 36px;
+		margin-right: 9px;
+	}
+	.merchcontainer {
+    padding: 8px 8px;
+    background: white;
+    border-radius: 15px;
+	width: auto;
+    max-width: 999px;
+	margin: 0 auto;
+	margin-top: 20px;
+		table {
+			border-radius: 9px;
+			overflow: hidden;
+			border-style: hidden; /* hide standard table (collapsed) border */
+			box-shadow: 0 0 0 1px #0d3058;
+			thead {
+				border-bottom: 0;
+				th {
+						font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+						font-size: 14px;
+					}
+			}
+			tbody {
+				td:nth-child(1) {
+					font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+					font-size: 14px;
+					border: 1px solid #0d3058;
+					vertical-align: middle;
+					min-width: 140px;
+					max-width: 140px;
+					text-align: center;
+				}
+				td:nth-child(2) {
+					border: 1px solid #0d3058;
+					min-width: 140px;
+					max-width: 140px;
+					vertical-align: middle;
+					text-align: center;
+				}
+				td:nth-child(3) {
+					border: 1px solid #0d3058;
+					vertical-align: middle;
+					text-align: center;
+					min-width: 140px;
+					max-width: 140px;
+					text-align: center;
+				}
+				td:nth-child(4) {
+					border: 1px solid #0d3058;
+					vertical-align: middle;
+					max-width: 123px;
+					min-width: 123px;
+				}
+				td:nth-child(5) {
+					border: 1px solid #0d3058;
+					padding: 0.3rem;
+					width: auto;
+					max-width: 240px;
+					min-width: 240px;
+				}
+				td:nth-child(6) {
+					border: 1px solid #0d3058;
+					padding: 0.3rem;
+					width: auto;
+					min-width: 201px;
+					max-width: 201px;
+					position: relative;
+					vertical-align: middle;
+				}
+				td {
+					a {
+						font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+						font-size: 14px;
+					}
+				}
+			}
+		}
+		.merchtablecountry {
+			display: inline-block;
+			width: 100%;
+			height: 100%;
+			font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			vertical-align: middle;
+			text-align: center;
+			.merccountryicon {
+				width: 32px;
+				height: 32px;
+				display: inline-block;
+			}
+			.merccountrytxt {
+				display: inline-block;
+				margin-left: 7px;
+				height: 32px;
+				width: auto;
+				overflow-wrap: break-word;
+				vertical-align: middle;
+				p {
+					font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+					font-size: 14px;
+					margin: 0;
+					height: 100%;
+					line-height: 32px;
+					display: inline-block;
+				}
+			}
+		}
+
+		.merchantextra {
+			list-style-type: none;
+			height: 100%;
+			display: inline-block;
+			float: left;
+			margin: 0;
+			padding: 0;
+			width: 100%;
+				li:nth-child(1) {
+					height: auto;
+					padding: 5px;
+					width: 100%;
+					display: inline-block;
+					float: left;
+				}
+				.mextraphone {
+					width: 100%;
+					height: 100%;
+					display: flex;
+					.extraicon {
+						width: 20px;
+						display: inline-block;
+						float: left;
+						vertical-align: middle;
+					}
+					.mextratxt {
+						display: inline-block;
+						margin-left: 7px;
+						height: 100%;
+						width: calc(100% - 27px);
+						overflow-wrap: break-word;
+						p {
+							font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+							font-size: 14px;
+							margin: 0;
+						}
+					}
+				}
+				li:nth-child(2) {
+					height: 33px;
+					padding: 5px;
+					width: 100%;
+					float: left;
+					display: inline-block;
+					.extrwebsicon {
+						display: flex;
+						width: 100%;
+						height: 100%;
+						font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+						font-size: 14px;
+						vertical-align: middle;
+						.xwbicon {
+							width: 20px;
+							height: 20px;
+							display: inline-block;
+						}
+						.xtxtbicon {
+							line-height: 23px;
+							display: inline-block;
+							margin-left: 7px;
+							height: 100%;
+							width: calc(100% - 27px);
+							overflow-wrap: break-word;
+							vertical-align: middle;
+							p {
+								font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+								font-size: 14px;
+								margin: 0;
+							}
+						}
+					}
+				}
+			}
+
+			.merchtableoption {
+				list-style-type: none;
+				height: 33px;
+				width: 100%;
+				float: left;
+				margin: 0;
+				padding: 0;
+				.merchtableedit {
+					height: auto;
+					padding: 8px 9px;
+					width: calc(50% - 2px);
+					display: inline-block;
+					float: left;
+					border: 1px solid #28a745;
+					border-radius: 20px;
+					margin-right: 2px;
+					.merchoptionedcont {
+						display: inline-block;
+						width: 100%;
+						height: 100%;
+						text-align: center;
+						.merchedicon {
+							width: 20px;
+							height: 100%;
+							display: inline-block;
+							position: relative;
+    						top: -2px;
+						}
+						.merchedittxt {
+							display: inline-block;
+							margin-left: 0;
+							height: 100%;
+							p {
+								font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+								font-size: 14px;
+								margin: 0;
+								height: 100%;
+								line-height: 24px;
+								color: #28a745;
+							}
+						}
+					}
+				}
+				.merchtabledelete {
+					height: auto;
+					padding: 8px 9px;
+					display: inline-block;
+					float: left;
+					border: 1px solid #e62719;
+					border-radius: 20px;
+					margin-left: 2px;
+					width: calc(50% - 2px);
+					.merchoptdeletecont {
+						display: inline-block;
+						width: 100%;
+						height: 100%;
+						text-align: center;
+						.merchdeleticon {
+							width: 20px;
+							height: 100%;
+							display: inline-block;
+							position: relative;
+							top: -1px;
+						}
+						.merchdeletetxt {
+							display: inline-block;
+							margin-left: 0px;
+							height: 100%;
+							line-height: 23px;
+							a {
+								font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+								font-size: 14px;
+								margin: 0;
+								height: 100%;
+								line-height: 23px;
+								color: #e62719;
+							}
+						}
+					}
+				}
+
+			}
+	}
+
+	.merchcontfooter {
+		text-align: center;
+		height: 40px;
+		position: relative;
+	}
+
+	.uplfilecontainer {
+		width: auto;
+		height: 100%;
+		display: inline-block;
+		background: white;
+		border-radius: 25px;
+		padding: 4px 4px;
+	}
+
+	.uplodmerchfile {
+		padding: 4px 0px;
+		background: none;
+		border-radius: 43px;
+		width: 999px;
+		height: 53px;
+		position: relative;
+		min-width: auto;
+		margin: 0 auto;
+		margin-top: 20px;
+		margin-bottom: 50px;
+		form {
+			display: inline-block;
+			float: left;
+			width: auto;
+			left: 0;
+			text-align: left;
+			height: 100%;
+			padding: 0px 0px;
+			.uploadmerchinpfile {
+				max-width: 220px;
+				color: black !important;
+				font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+				font-size: 14px;
+				height: 100%;
+				border: 1px solid #0d3058;
+				padding: 7px 12px;
+				background: #e9ecef;
+				width: auto;
+				text-align: center;
+				float: left;
+			}
+			.uploadmercfilesubmitbtn {
+				height: 100%;
+				background: #28a745;
+				color: white;
+				font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+				font-size: 14px;
+				float: left;
+			}
+		}
+	}
+}
+.plusmenumerch {
+	position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 55px;
+    height: 55px;
+    background: #0d3058;
+    border-radius: 50%;
+    box-shadow: 0px 0rem 2rem rgba(0,0,0,0.9)!important;
+    padding: 13px;
+	.plsmenuicon {
+		width: 100%;
+		height: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+/*
+	Max width before this PARTICULAR table gets nasty. This query will take effect for any screen smaller than 760px and also iPads specifically.
+	*/
+	@media
+	  only screen 
+    and (max-width: 760px), (min-device-width: 768px) 
+    and (max-device-width: 1024px)  {
+
+		/* Force table to not be like tables anymore */
+		table, thead, tbody, th, td, tr {
+			display: block;
+		}
+
+		/* Hide table headers (but not display: none;, for accessibility) */
+		thead tr {
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+
+
+     .merchantextra, .merchtableoption {
+		 
+	 } 
+    tr:nth-child(odd) {
+		background: #0e30582e;
+    }
+    
+		td {
+			/* Behave  like a "row" */
+		
+			
+			position: relative;
+			padding-left: 50%;
+			min-width: unset !important;
+			max-width: unset !important;
+			font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+			font-size: 14px
+		}
+
+		td {
+			
+			padding: 0;
+			width: 100%;
+			vertical-align: middle;
+			border: none !important;
+			min-height: 50px !important;
+			ul {
+
+				position: relative;
+				height: auto !important;
+				float: unset !important;
+				left: 156.5px;
+				min-height: 50px;
+				top: 0px;
+				margin: 0;
+				margin-right: 0;
+
+				width: calc(50% + 130px) !important;
+				float: right !important;
+				height: 100% !important;
+				display: flex !important;
+				flex-wrap: wrap;
+				align-content: center;
+				position: absolute;
+				right: 0;
+				border-bottom: 1px solid #0e3058;
+				padding: 0 10px !important;
+		}}
+
+		td:before {
+			/* Now like a table header */
+			position: absolute;
+			top: 0;
+			left: 0px;
+			width: calc(50% - 130px);
+			padding: 0 10px;
+			white-space: nowrap;
+			height: 100%;
+			vertical-align: middle;
+			text-align: left;
+			background: #0e3058;
+			color: white;
+			align-content: center;
+			display: flex;
+			flex-wrap: wrap;
+			border-bottom: 1px solid white;
+		}
+
+		/*
+		Label the data
+    You could also use a data-* attribute and content for this. That way "bloats" the HTML, this way means you need to keep HTML and CSS in sync. Lea Verou has a clever way to handle with text-shadow.
+		*/
+		td:nth-of-type(1):before { content: "First Name"; }
+		td:nth-of-type(2):before { content: "Last Name"; }
+		td:nth-of-type(3):before { content: "First Name"; }
+		td:nth-of-type(4):before { content: "Last Name"; }
+		td:nth-of-type(5):before { content: "First Name"; }
+		td:nth-of-type(6):before { content: "First Name"; }
+
+	}

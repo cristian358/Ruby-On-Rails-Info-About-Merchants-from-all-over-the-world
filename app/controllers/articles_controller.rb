@@ -1,0 +1,54 @@
+class ArticlesController < ApplicationController
+  
+  before_action :authenticate_user!
+  def index
+    @article = Article.new
+    @articles = Article.text_search(params[:query]).page(params[:page]).per_page(40)
+    # flash[:notice] = "Widget was successfully created."
+
+  end
+
+  def destroy
+    @article = Article.find(params[:id])
+    @article.destroy
+    respond_to do |format|
+      format.js   { render :layout => false }
+      format.html { redirect_to article_url, notice: "Band was successfully destroyed." }
+      format.json { head :no_content }
+    end
+  end
+
+
+  
+  def show
+    @articles = Article.find(params[:id])
+    @comment = Comment.new(article_id: @articles.id)
+    @contactmethod = params[:contactmethod]
+    @ad_type = params[:ad_type]
+    respond_to do |format|
+      if @ad_type = "one"
+        # flash[:notice] = "Widget was successfully created."
+        format.json { render :show, status: :ok, location: @articles }
+      else
+        flash[:notice] = "Widget was successfully created."
+        format.json { render json: @articles.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+  def collection_radio_buttons(method, collection, value_method, text_method, options = {}, html_options = {}, &block)
+  @template.collection_radio_buttons(@object_name, method, collection, value_method, text_method, objectify_options(options), @default_html_options.merge(html_options), &block)
+end
+
+
+def ad_type_radio_button(ad_type)
+  selected_ad_type = params[:ad_type] || "free"
+
+  if selected_ad_type == ad_type
+    # flash[:notice] = "Widget was successfully created."
+    radio_button_tag(:ad_type, ad_type, :checked => true)
+  else
+    radio_button_tag(:ad_type, ad_type)
+  end
+end
+
+end
