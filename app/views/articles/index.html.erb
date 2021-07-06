@@ -3,6 +3,7 @@
   <h1>Merchant List</h1>
   <%= render "articles/searchmerchants" %>
 
+
   <div class="shadow-lg merchcontainer">
     <table id="bands" class="table">
       <thead class="thead-dark">
@@ -11,7 +12,10 @@
           <th>City</th>
           <th>Street</th>
           <th>Country Code</th>
-          <th>Extra</th><th>Options</th>
+          <th>Extra</th>
+          <% if current_user.role[:name] != 'user' %>
+          <th>Options</th>
+          <% end %>
         </tr>
       </thead>
       <tbody>
@@ -70,8 +74,10 @@
                 </li>
               </ul>
             </td>
+            <% if current_user.role[:name] != 'user' %>
             <td>
               <ul class="merchtableoption">
+              <% if current_user.role[:name] == 'moderator' || current_user.role[:name] == 'admin' %> 
                 <li class="merchtableedit">
                   <div class="merchoptionedcont">
                     <div class="merchedicon">
@@ -82,7 +88,11 @@
                     </div>
                   </div>
                 </li>
+                <% end %>
+
+                <% if current_user.role[:name] == 'admin' %> 
                 <li class="merchtabledelete">
+                <% end %>
                   <div class="merchoptdeletecont">
                     <div class="merchdeleticon">
                     <%= show_svg('garbage.svg') %>
@@ -96,6 +106,7 @@
                 </li>
               </ul>
             </td>
+            <% end %>
           </tr>
         <% end %>
       </tbody>
