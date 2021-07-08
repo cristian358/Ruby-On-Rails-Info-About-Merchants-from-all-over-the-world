@@ -11,7 +11,8 @@
 "></div>
 <div class="container">
 
-<%= form_for(resource, as: resource_name, html: {class: 'maxdimensions centeringcomponent w-100 h-100'}, url: user_session_path) do |f| %>
+<%= form_for(resource, as: resource_name, html: {id:"login-form", class: 'maxdimensions centeringcomponent w-100 h-100'}, remote: true, url: user_session_path) do |f| %>
+
 
 <div class="row justify-content-center" style="">
 <div class="col-md-8 col-lg-6" style="background: radial-gradient(#030b16, transparent);">

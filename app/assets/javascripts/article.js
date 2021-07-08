@@ -22,6 +22,35 @@ $(document).ready(function() {
 
 
 
+
+
+
+
+  $(document).on('submit', '#login-form', function(){
+	var $form, $btn;
+  
+	$form = $(this);
+	$btn = $form.find('input[type="submit"]');
+	$form.find('.errors').remove();
+  
+	$.post({
+	  url: this.action,
+	  data: $form.serialize()
+	}).error(function(jqXHR, textStatus, errorThrown){
+	  $form.prepend('<div class="errors">Invalid email or password</div>');
+	  // Unlocks the UI button
+	  $btn.prop( "disabled", false );
+	});
+  
+	// prevent default submission
+	return false;
+  });
+
+
+
+
+
+
 	 $("#uploadfileform").submit(function(evt){	 
 
 		evt.preventDefault();

@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   before_action :authenticate_user!
   def index
     @article = Article.new
-    @articles = Article.text_search(params[:query]).page(params[:page]).per_page(40)
+    @articles = Article.text_search(params[:query], params[:ad_type]).page(params[:page]).per_page(40)
     # flash[:notice] = "Widget was successfully created."
 
   end
@@ -40,15 +40,6 @@ class ArticlesController < ApplicationController
 end
 
 
-def ad_type_radio_button(ad_type)
-  selected_ad_type = params[:ad_type] || "free"
 
-  if selected_ad_type == ad_type
-    # flash[:notice] = "Widget was successfully created."
-    radio_button_tag(:ad_type, ad_type, :checked => true)
-  else
-    radio_button_tag(:ad_type, ad_type)
-  end
-end
 
 end

@@ -10,7 +10,7 @@ class Company < ApplicationRecord
             data3["contact_website"] = data['contact_website']
      
             data4 = {}
-            data4["name"] = row.field('name').gsub(/[^a-zA-ZÀ-ÿ ]/, "").gsub(/ +/, ' ').lstrip
+            data4["name"] = row.field('name').gsub(/[^a-zA-ZÀ-ÿ ]/, "").gsub(/ +/, ' ').lstrip.rstrip
             data4["city"] = row.field('city')
             data4["street"] = row.field('street')
             data4["extra"] = data3
