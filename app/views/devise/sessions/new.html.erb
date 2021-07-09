@@ -11,11 +11,10 @@
 "></div>
 <div class="container">
 
-<%= form_for(resource, as: resource_name, html: {id:"login-form", class: 'maxdimensions centeringcomponent w-100 h-100'}, remote: true, url: user_session_path) do |f| %>
-
+<%= form_for(resource, as: resource_name, html: {class: 'maxdimensions centeringcomponent w-100 h-100'}, url: user_session_path) do |f| %>
 
 <div class="row justify-content-center" style="">
-<div class="col-md-8 col-lg-6" style="background: radial-gradient(#030b16, transparent);">
+<div class="col-md-8 col-lg-6" style="background: radial-gradient(#030b16, transparent);    border-radius: 15px;">
 <div class="login-wrap p-0">
 <div style="
   width: 100%;
@@ -32,7 +31,7 @@
 
 <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "Username", style: "
 border: 1px solid;
-font-weight: bold;
+
 padding: 0px 48px 0 30px;font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
 "  %>
 </div>
@@ -40,7 +39,7 @@ padding: 0px 48px 0 30px;font-family: SFProDisplay-Regular, Helvetica, Arial, sa
 
 <%= f.password_field :password, autocomplete: "current-password", type: "password", class: "form-control", placeholder: "Password", style: "
 border: 1px solid;
-font-weight: bold;
+
 padding: 0px 48px 0 30px;font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
 " %>
 
@@ -65,7 +64,7 @@ padding: 0px 48px 0 30px;font-family: SFProDisplay-Regular, Helvetica, Arial, sa
   <%= f.check_box :remember_me, type: "checkbox", checked: "" %>
   <%= f.label :remember_me, class: "checkbox-wrap checkbox-primary", style: "
   color: white;
-  font-size: 1rem;
+  font-size: 14px;
   height: 22px;
   margin: 0;
   display: inline-block;
@@ -102,3 +101,6 @@ height: 44px;">
 </div>
 <% end %>
 </div>
+
+
+

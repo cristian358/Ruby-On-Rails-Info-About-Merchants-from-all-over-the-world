@@ -1,14 +1,36 @@
 <% if resource.errors.any? %>
-  <div id="error_explanation">
-    <h2>
+  <div id="error_explanation" style="    bottom: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 14px 0px #9e9e9e;
+  text-align: center;
+  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+  font-size: 15px;
+  color: red;
+  z-index: 1;
+  overflow: hidden;
+  border: none;
+  margin: 0 auto;
+  background: radial-gradient(#ffffff, #ffffff4a);
+  min-width: 363px;" class="col-md-9 col-lg-6">
+    <h2 style="    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    padding: 5px 20px;
+    background: #ff0000b3;">
       <%= I18n.t("errors.messages.not_saved",
                  count: resource.errors.count,
                  resource: resource.class.model_name.human.downcase)
        %>
     </h2>
-    <ul>
+    <ul style="
+    list-style-type: none;
+    font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+    padding: 5px 27px;
+    margin-bottom: 0;
+">
       <% resource.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+        <li style="
+        list-style-type: decimal;
+        font-size: 14px;
+    "><%= message %></li>
       <% end %>
     </ul>
   </div>

@@ -26,7 +26,7 @@ $(document).ready(function() {
 
 
 
-  $(document).on('submit', '#login-form', function(){
+  $(document).on('submit', '#login-form', function(event){
 	var $form, $btn;
   
 	$form = $(this);
@@ -37,7 +37,10 @@ $(document).ready(function() {
 	  url: this.action,
 	  data: $form.serialize()
 	}).error(function(jqXHR, textStatus, errorThrown){
-	  $form.prepend('<div class="errors">Invalid email or password</div>');
+		console.log(event);
+		alertify.set({ delay: 3000 });
+
+		alertify.error(event.message); 
 	  // Unlocks the UI button
 	  $btn.prop( "disabled", false );
 	});
@@ -600,7 +603,7 @@ $(document).ready(function() {
 			 if(type == "error") {
 			  log.style.cssText += "    box-shadow: 1px 7px 14px -5px rgb(0 0 0 / 20%);          background: white;          padding: 10px;          border-radius: 20px;          border: none;          background: linear-gradient(181deg, #fa2c15, transparent);          background-color: white;";
 	
-			  log.insertAdjacentHTML("beforeend", "<%= j render 'layouts/errormessage' %>");
+			  log.insertAdjacentHTML("beforeend", "<div style=' display: table;'><div style=' display: table-cell;			  width: 55px;			  height: 55px;			  text-align: center;			  vertical-align: middle;		  '><i class='start-icon far fa-times-circle faa-pulse animated' style='			  font-size: 40px;			  color: #0c3059;			  box-shadow: none;		  '></i></div><div style='			  display: table-cell;			  text-align: left;			  vertical-align: middle;			  padding: 0 0 0 10px;		  '><p id='error' style='			  width: 100%;			  margin: 0;			  font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;			  font-size: 15px;			  color: #0c3059;			  text-shadow: none;			  font-weight: bold;		  '>" + message + "  </p></div></div>");
 			}
 			
 					// append child
