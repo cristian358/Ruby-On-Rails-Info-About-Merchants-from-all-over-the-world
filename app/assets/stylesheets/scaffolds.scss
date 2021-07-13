@@ -327,6 +327,20 @@ label {
 
 
 
+.navbar-brand:hover {
+	color: #0d3058 !important;
+	background-color: #ffffff !important;
+	
+	svg {
+		g {
+			path {
+				fill: #0d3058 !important;
+			}
+		}
+	}
+}
+
+
 
 /**
  * Default Look and Feel
