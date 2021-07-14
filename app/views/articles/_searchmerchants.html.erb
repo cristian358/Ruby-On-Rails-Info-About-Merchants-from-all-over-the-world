@@ -16,17 +16,6 @@
   <%= label_tag :ad_type, 'Name', :value => 'name', class: "form-check-label", for: "ad_type_name" %>
 </div>
 
-
-    <div class="desc">
-      <div class="form-check d-inline-block w-auto h-100 merchk">
-        <%= check_box_tag :contactmethod, 'Email', :value => 'email', class: 'form-check-input d-inline-block' %>
-        <%= label_tag :contactmethod, 'Phone', :checked =>  ad_type_radio_button("email"), :class => 'form-check-label' %> 
-      </div>
-      <div class="form-check d-inline-block merchw">
-        <%= check_box_tag :contactmethod, 'Website', :value => 'email', :checked =>  ad_type_radio_button("email"), :class => 'form-check-input d-inline-block' %>
-        <%= label_tag :contactmethod, 'Phone', :checked =>  ad_type_radio_button("email"), :class => 'form-check-label' %> 
-      </div>
-    </div>
   
 
 <div class="divide"></div>

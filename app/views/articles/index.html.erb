@@ -22,8 +22,12 @@
         <% @articles.each do |article| %>
           <tr>
             <td>
-                <%= article.name %>
                 <%= link_to article.name, article %>
+
+
+                <% if (article.name.empty?) %>
+                missing name
+              <% end %>
             </td>
             <td>
                 <%= article.city %>
@@ -79,7 +83,9 @@
             <td>
               <ul class="merchtableoption">
               <% if current_user.role[:name] == 'moderator' || current_user.role[:name] == 'admin' %> 
-                <li class="merchtableedit">
+              
+              <li class="merchtableedit p-0" style="padding: 0;">
+              <%= link_to edit_article_path(article), style: "width: 100%;height: 41px;display: inline-block;" do %>
                   <div class="merchoptionedcont">
                     <div class="merchedicon">
                     <%= show_svg('edit.svg') %>
@@ -88,23 +94,28 @@
                       <p>Edit</p>
                     </div>
                   </div>
+                  <% end %>
                 </li>
                 <% end %>
 
                 <% if current_user.role[:name] == 'admin' %> 
-                <li class="merchtabledelete">
-                <% end %>
-                  <div class="merchoptdeletecont">
+                <li class="merchtabledelete" style="padding: 0;">
+                <%= link_to(article, method: :delete, data: { confirm: 'Are you sure?', remote: true }, class: "delete", style: "color: #e62719; width: 100%;
+                height: 41px;
+                display: inline-block;") do %>
+                      
+                  <div class="merchoptdeletecont" >
                     <div class="merchdeleticon">
                     <%= show_svg('garbage.svg') %>
                     </div>
                     <div class="merchdeletetxt">
-                      <%= link_to(article, method: :delete, data: { confirm: 'Are you sure?', remote: true }, class: "delete") do %>
-                        Delete
-                      <% end %>
+                   Delete
+                     
                     </div>
                   </div>
+                  <% end %>
                 </li>
+                <% end %>
               </ul>
             </td>
             <% end %>

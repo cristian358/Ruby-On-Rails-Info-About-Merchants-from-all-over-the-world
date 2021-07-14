@@ -7,6 +7,6 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 # 1000.times do
 # end
-['registered', 'banned', 'moderator', 'admin'].each do |role|
+['user', 'moderator', 'admin'].each do |role|
   Role.find_or_create_by({name: role})
 end
