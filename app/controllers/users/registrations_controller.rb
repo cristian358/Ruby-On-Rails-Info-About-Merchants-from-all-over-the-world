@@ -13,14 +13,14 @@ super
   # POST /resource
   def create
 
+super
 
-
-    super do |created_user|
-      if created_user.id
-        # company = User.create! create_company_params
-        created_user.update! role_id: 1
-      end
-    end
+    # super do |created_user|
+    #   if created_user.id
+    #     # company = User.create! create_company_params
+    #     created_user.update! role_id: 1
+    #   end
+    # end
 
 
 #     build_resource(sign_up_params)

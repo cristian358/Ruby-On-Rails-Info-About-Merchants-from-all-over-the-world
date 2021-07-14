@@ -26,7 +26,10 @@
 
 
                 <% if (article.name.empty?) %>
-                missing name
+               
+                <%= link_to article.name do %>
+                  missing name
+                  <% end %>
               <% end %>
             </td>
             <td>
